@@ -1,25 +1,28 @@
 class User {
-  usuario = "";
-  password = "";
-  mail = "";
+  constructor(usuario, password, mail) {
+    this.usuario = usuario;
+    this.password = password;
+    this.mail = mail;
+  }
 }
 
 var registros = [];
 
-function registrar(usuario, pass, pass2, mail, validacion, validacionFinal) {
-  retorno = buscarUser(usuario, mail);
-  if (retorno !== undefined) {
-    if (pass === pass2) {
-        if (validacion === validacionFinal) {
-            retorno = new User(usuario, pass, mail);
-            registros.push(User);
-        }
+function existeUsuario(nombreUsuario, email) {
+  let i = 0; let retorno = false;
+  while (i < registros.length && retorno === false) {
+    if (registros[i].usuario === nombreUsuario || registros[i].mail === email) {
+      retorno === true;
     }
   }
-
+  return retorno;
 }
 
-function buscarUser(usuario, mail) {
- retorno = registros.find(User.usuario === usuario && User.mail === mail);
-  return retorno;
+function registrar(nombreUsuario, pass, confirmPass, email, captcha) {
+  let existe = existeUsuario(nombreUsuario, email);
+  if (existe === false) {
+    if (pass === confirmPass && captcha === document.getElementById("captcha").innerHTML) {
+      registros.push(new User(nombreUsuario, pass, email));
+    }
+  }
 }
