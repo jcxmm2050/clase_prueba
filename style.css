@@ -1,13 +1,17 @@
 body{
+  background-color: #525558;
   display: flex;
 
   justify-content: center;
 }
 
 .container {
-  border: 1px solid red;
+  border: 2px solid white;
+  border-radius: 10px;
   width: 350px;
   height: auto;
+
+  background-color: #759eff;
 
   display: flex;
   flex-direction: column;
@@ -18,4 +22,41 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.botones {
+  display: flex;
+  flex-direction: row;
+}
+
+img{
+  margin: 10px;
+}
+
+label, input {
+  margin: 10px 0px 0px 0px;
+}
+
+#login{
+  padding: 5px 10px;
+  margin: 10px;
+  background-color: #ffbf75;
+  border: none;
+  border-radius: 5px;
+}
+
+#login:hover{
+  background-color: #ffa43a;
+}
+
+#registrarse{
+  padding: 5px 10px;
+  margin: 10px;
+  background-color: #ffbf75;
+  border: none;
+  border-radius: 5px;
+}
+
+#registrarse:hover{
+  background-color: #ffa43a;
 }
