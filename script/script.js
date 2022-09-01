@@ -1,5 +1,4 @@
 class User {
-  nombre = "";
   usuario = "";
   password = "";
   mail = "";
@@ -7,20 +6,20 @@ class User {
 
 var registros = [];
 
-function registrar(user, pass) {
-  var registrados = [];
-  if (retorno !== null) {
-
+function registrar(usuario, pass, pass2, mail, validacion, validacionFinal) {
+  retorno = buscarUser(usuario, mail);
+  if (retorno !== undefined) {
+    if (pass === pass2) {
+        if (validacion === validacionFinal) {
+            retorno = new User(usuario, pass, mail);
+            registros.push(User);
+        }
+    }
   }
 
 }
 
-function buscarUser(user) {
-  var i = 0; retorno = null;
-  while (i < registros.length && retorno === null) {
-    if (registros[i].mail === user.mail || registros[i].usuario === user.usuario) {
-      retorno = registros[i];
-    } else i++;
-  }
+function buscarUser(usuario, mail) {
+ retorno = registros.find(User.usuario === usuario && User.mail === mail);
   return retorno;
 }
