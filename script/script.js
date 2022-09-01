@@ -13,7 +13,7 @@ function existeUsuario(nombreUsuario, email) {
   while (i < registros.length && retorno === false) {
     if (registros[i].usuario === nombreUsuario || registros[i].mail === email) {
       retorno === true;
-    }
+    } else i++;
   }
   return retorno;
 }
