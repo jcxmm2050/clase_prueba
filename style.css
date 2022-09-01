@@ -10,6 +10,7 @@ body{
   border-radius: 10px;
   width: 350px;
   height: auto;
+  padding: 20px;
 
   background-color: #759eff;
 
@@ -59,4 +60,10 @@ label, input {
 
 #registrarse:hover{
   background-color: #ffa43a;
+}
+
+img {
+ height: 100px;
+ width: 100px;
+ margin-bottom: 10px;
 }
