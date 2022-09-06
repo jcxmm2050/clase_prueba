@@ -1,69 +1,8 @@
-body{
-  background-color: #525558;
-  display: flex;
-
-  justify-content: center;
+body {
+  background: rgb(185,207,219);
+  background: linear-gradient(117deg, rgba(185,207,219,1) 0%, rgba(235,199,181,1) 100%);
 }
 
 .container {
-  border: 2px solid white;
-  border-radius: 10px;
-  width: 350px;
-  height: auto;
-  padding: 20px;
-
-  background-color: #759eff;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#formulario {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.botones {
-  display: flex;
-  flex-direction: row;
-}
-
-img{
-  margin: 10px;
-}
-
-label, input {
-  margin: 10px 0px 0px 0px;
-}
-
-#login{
-  padding: 5px 10px;
-  margin: 10px;
-  background-color: #ffbf75;
-  border: none;
-  border-radius: 5px;
-}
-
-#login:hover{
-  background-color: #ffa43a;
-}
-
-#registrarse{
-  padding: 5px 10px;
-  margin: 10px;
-  background-color: #ffbf75;
-  border: none;
-  border-radius: 5px;
-}
-
-#registrarse:hover{
-  background-color: #ffa43a;
-}
-
-img {
- height: 100px;
- width: 100px;
- margin-bottom: 10px;
+  background-color: azure;
 }
