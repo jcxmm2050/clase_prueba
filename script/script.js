@@ -1,8 +1,8 @@
 var registros = [
   {
-    username: "aStonerDev",
-    password: "aa00d3",
-    email: "stonerDev@gmail.com"
+    username: "test",
+    password: "test01",
+    email: "testing@gmail.com"
   }
 ];
 
@@ -11,6 +11,9 @@ const password = document.getElementById("password").innerHTML;
 const rPassword = document.getElementById("r-password").innerHTML;
 const email = document.getElementById("email");
 const captcha = document.getElementById("captcha").innerHTML;
+const botonRegistro = document.getElementById("registrarse");
+
+botonRegistro.addEventListener("click", test);
 
 function registrar() {
   if (!existe(email, username)) {
@@ -21,6 +24,10 @@ function registrar() {
       }
     }
   }  
+}
+
+function test() {
+  console.log("Hola")
 }
 
 function existe(email, username) {
