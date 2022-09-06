@@ -15,13 +15,23 @@ class Usuario {
   get password() {
     return this.password;
   }
+
+  set username(nuevoUser) {
+    return this.username = nuevoUser;
+  }
+  set email(nuevoMail) {
+    return this.email = nuevoMail;
+  }
+  set password(nuevaPass) {
+    return this.password = nuevaPass;
+  }
 }
 
 let registros = [];
 
 /* Obteniendo valores del html */
 
-const username = document.getElementById("username");
+const usuario = document.getElementById("username");
 const password = document.getElementById("password");
 const rPassword = document.getElementById("rpassword");
 const mail = document.getElementById("email");
@@ -35,10 +45,10 @@ botonRegistro.addEventListener('click', registrar);
 /* Funciones */
 
 function registrar() {
-  if (!existe(mail.innerHTML, username.innerHTML)) {
+  if (!existe(mail.innerHTML, usuario.innerHTML)) {
     if (password.innerHTML == rPassword.innerHTML) {
       if (verif.value === captcha) {
-        registros.push(new Usuario(username.innerHTML, email.innerHTML, password.innerHTML));
+        registros.push(new Usuario(usuario.innerHTML, email.value, password.innerHTML));
         console.log("Registrado");
       } else console.log('Captcha incorrecto');
     } else console.log('Contraseña mal colocada');
