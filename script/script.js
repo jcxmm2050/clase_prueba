@@ -6,28 +6,28 @@ var registros = [
   }
 ];
 
-const username = document.getElementById("username").innerHTML;
-const password = document.getElementById("password").innerHTML;
-const rPassword = document.getElementById("r-password").innerHTML;
+const username = document.getElementById("username");
+const password = document.getElementById("password");
+const rPassword = document.getElementById("r-password");
 const email = document.getElementById("email");
-const captcha = document.getElementById("captcha").innerHTML;
-const botonRegistro = document.getElementById("registrarse");
+const captcha = document.getElementById("captcha");
+const botonRegistro = document.getElementById("done");
 
-botonRegistro.addEventListener("click", test);
+botonRegistro.addEventListener('click', test);
+
+function test() {
+  console.log("Hola")
+}
 
 function registrar() {
-  if (!existe(email, username)) {
-    if (password === rPassword) {
-      if (captcha === "valido ingreso") {
+  if (!existe(email.innerHTML, username.innerHTML)) {
+    if (password.innerHTML === rPassword.innerHTML) {
+      if (captcha.innerHTML === "valido ingreso") {
         registros.push({username: username, password: password, email: email});
         console.log("Registrado");
       }
     }
   }  
-}
-
-function test() {
-  console.log("Hola")
 }
 
 function existe(email, username) {
