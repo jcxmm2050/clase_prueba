@@ -1,4 +1,10 @@
-var registros = [];
+var registros = [
+  {
+    username: "aStonerDev",
+    password: "aa00d3",
+    email: "stonerDev@gmail.com"
+  }
+];
 
 const username = document.getElementById("username").innerHTML;
 const password = document.getElementById("password").innerHTML;
