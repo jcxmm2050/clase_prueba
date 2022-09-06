@@ -1,28 +1,27 @@
-class User {
-  constructor(usuario, password, mail) {
-    this.usuario = usuario;
-    this.password = password;
-    this.mail = mail;
-  }
-}
-
 var registros = [];
 
-function existeUsuario(nombreUsuario, email) {
-  let i = 0; let retorno = false;
-  while (i < registros.length && retorno === false) {
-    if (registros[i].usuario === nombreUsuario || registros[i].mail === email) {
-      retorno === true;
-    } else i++;
-  }
-  return retorno;
+const username = document.getElementById("username").innerHTML;
+const password = document.getElementById("password").innerHTML;
+const rPassword = document.getElementById("r-password").innerHTML;
+const email = document.getElementById("email");
+const captcha = document.getElementById("captcha").innerHTML;
+
+function registrar() {
+  if (!existe(email, username)) {
+    if (password === rPassword) {
+      if (captcha === "valido ingreso") {
+        registros.push({username: username, password: password, email: email});
+      }
+    }
+  }  
 }
 
-function registrar(nombreUsuario, pass, confirmPass, email, captcha) {
-  let existe = existeUsuario(nombreUsuario, email);
-  if (existe === false) {
-    if (pass === confirmPass && captcha === document.getElementById("captcha").innerHTML) {
-      registros.push(new User(nombreUsuario, pass, email));
+function existe(email, username) {
+  let retorno = false; let i = 0;
+  while (i < registros.length && retorno === false) {
+    if (registros[i].username === username || registros[i].email === email) {
+      retorno = true;
     }
   }
+  return retorno;
 }

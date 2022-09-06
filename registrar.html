@@ -23,42 +23,42 @@
         <form action="">
 
           <div class="mb-4">
-            <label for="email" class="form-label">Usuario</label>
-            <input type="text" class="form-control" name="email">
+            <label for="email" class="form-label" id="username">Usuario</label>
+            <input type="text" class="form-control" name="email" required>
           </div>
 
           <div class="mb-4">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" name="password">
+            <label for="password" class="form-label" id="password">Password</label>
+            <input type="password" class="form-control" name="password" required>
           </div>
 
           <div class="mb-4">
-            <label for="password" class="form-label">Repetir Password</label>
-            <input type="password" class="form-control" name="password">
+            <label for="password" class="form-label" id="r-password">Repetir Password</label>
+            <input type="password" class="form-control" name="password" required>
           </div>
 
           <div class="mb-4">
             <label for="password" class="form-label">Nombre</label>
-            <input type="text" class="form-control" name="password">
+            <input type="text" class="form-control" name="password" required>
           </div>
 
           <div class="mb-4">
             <label for="password" class="form-label">Apellido</label>
-            <input type="text" class="form-control" name="password">
+            <input type="text" class="form-control" name="password" required>
           </div>
 
           <div class="mb-4">
             <label for="password" class="form-label">Fecha de Nacimiento</label>
-            <input type="date" class="form-control" name="password">
+            <input type="date" class="form-control" name="password" required>
           </div>
           
           <div class="mb-4">
-            <label for="password" class="form-label">Captcha (v4lid0 ingr32o)</label>
-            <input type="text" class="form-control" name="password">
+            <label for="password" class="form-label" id="captcha">Captcha (v4lid0 ingr32o)</label>
+            <input type="text" class="form-control" name="password" required>
           </div>
 
           <div class="d-grid">
-            <button type="submit" class="btn btn-primary">Iniciar sesion</button>
+            <button type="submit" class="btn btn-primary" onclick="registrar()">Iniciar sesion</button>
           </div>
 
         </form>
