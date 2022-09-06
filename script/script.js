@@ -17,6 +17,7 @@ function registrar() {
     if (password === rPassword) {
       if (captcha === "valido ingreso") {
         registros.push({username: username, password: password, email: email});
+        console.log("Registrado");
       }
     }
   }  
