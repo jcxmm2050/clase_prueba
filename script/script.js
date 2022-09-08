@@ -25,7 +25,7 @@ function registrar() {
       if (verif.value === captcha) {
         let usuario = {nombre: usuario.innerHTML, mail: email.value, pass: password.innerHTML};
         registros.push(usuario);
-        resultado = "Registrado";
+        alert("Registrado");
       } else alert('Captcha incorrecto');
     } else alert('Contraseña mal colocada');
   } else alert('Usuario existente');
