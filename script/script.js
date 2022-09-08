@@ -1,4 +1,10 @@
-let registros = [];
+let registros = [
+  {
+    nombre: "test",
+    mail: "test@gmail.com",
+    pass: "asd"
+  }
+];
 
 /* Obteniendo valores del html */
 
@@ -9,21 +15,20 @@ const mail = document.getElementById("email");
 const verif = document.getElementById("verif");
 const botonRegistro = document.getElementById("done");
 const captcha = "valido ingreso";
-/* Funcion al boton */
-
-botonRegistro.addEventListener('click', registrar);
 
 /* Funciones */
 
 function registrar() {
+  let resultado;
   if (!existe(mail.innerHTML, usuario.innerHTML)) {
     if (password.innerHTML == rPassword.innerHTML) {
       if (verif.value === captcha) {
-        registros.push({nombre: usuario.innerHTML, mail: email.value, pass: password.innerHTML});
-        console.log("Registrado");
-      } else console.log('Captcha incorrecto');
-    } else console.log('Contraseña mal colocada');
-  } else console.log('Usuario existente');
+        let usuario = {nombre: usuario.innerHTML, mail: email.value, pass: password.innerHTML};
+        registros.push(usuario);
+        resultado = "Registrado";
+      } else alert('Captcha incorrecto');
+    } else alert('Contraseña mal colocada');
+  } else alert('Usuario existente');
 }
 
 function existe(mail, usuario) {
@@ -31,7 +36,7 @@ function existe(mail, usuario) {
   while (i < registros.length && retorno === false) {
     if (registros[i].username === usuario || registros[i].email === mail) {
       retorno = true;
-    }
+    } else i++;
   }
   return retorno;
 }
