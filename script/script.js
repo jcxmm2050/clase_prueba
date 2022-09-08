@@ -40,3 +40,7 @@ function existe(mail, usuario) {
   }
   return retorno;
 }
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
