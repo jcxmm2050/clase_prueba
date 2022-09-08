@@ -1,32 +1,3 @@
-/* Creando la clase */
-
-class Usuario {
-  constructor(username, email, password) {
-    this.username = username;
-    this.email = email;
-    this.password = password;
-  }
-  get username() {
-    return this.username;
-  }
-  get email() {
-    return this.email;
-  }
-  get password() {
-    return this.password;
-  }
-
-  set username(nuevoUser) {
-    return this.username = nuevoUser;
-  }
-  set email(nuevoMail) {
-    return this.email = nuevoMail;
-  }
-  set password(nuevaPass) {
-    return this.password = nuevaPass;
-  }
-}
-
 let registros = [];
 
 /* Obteniendo valores del html */
@@ -48,7 +19,7 @@ function registrar() {
   if (!existe(mail.innerHTML, usuario.innerHTML)) {
     if (password.innerHTML == rPassword.innerHTML) {
       if (verif.value === captcha) {
-        registros.push(new Usuario(usuario.innerHTML, email.value, password.innerHTML));
+        registros.push({nombre: usuario.innerHTML, mail: email.value, pass: password.innerHTML});
         console.log("Registrado");
       } else console.log('Captcha incorrecto');
     } else console.log('Contraseña mal colocada');
