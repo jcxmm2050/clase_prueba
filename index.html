@@ -20,20 +20,20 @@
 
         <h2 class="fw-bold text-center pb-5">Bienvenido</h2>
 
-        <form>
+        <form onsubmit="login()" method="dialog">
 
           <div class="mb-4">
             <label for="email" class="form-label">Correo Electronico</label>
-            <input type="email" class="form-control" name="email">
+            <input type="email" class="form-control" name="email" id="l-mail" required>
           </div>
 
           <div class="mb-4">
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" name="password">
+            <input type="password" class="form-control" name="password" id="l-pass" required>
           </div>
 
           <div class="mb-4 form-check">
-            <input type="checkbox" name="conectado" id="" class="form-check-input">
+            <input type="checkbox" name="conectado" class="form-check-input">
             <label for="conectado" class="form-check-label">Mantener la sesion conectada</label>
           </div>
 
@@ -41,6 +41,7 @@
             <button type="submit" class="btn btn-primary">Iniciar sesion</button>
           </div>
         </form>
+
         <div class="d-grid">
           <button type="submit" class="reg btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter" id="myInput">Registrarse</button>
         </div>
@@ -100,7 +101,7 @@
                 </div>
       
                 <div class="d-grid">
-                  <button type="submit" class="btn btn-primary" id="done">Iniciar sesion</button>
+                  <button type="submit" class="btn btn-primary">Registrarse</button>
                 </div>
       
               </form>
