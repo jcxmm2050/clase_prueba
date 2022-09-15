@@ -23,8 +23,8 @@ function registrar() {
   if (!existe(mail.innerHTML, usuario.innerHTML)) {
     if (password.innerHTML == rPassword.innerHTML) {
       if (verif.value === captcha) {
-        let usuario = {nombre: usuario.innerHTML, mail: email.value, pass: password.innerHTML};
-        registros.push(usuario);
+        let newUser = {nombre: usuario.innerHTML, mail: email.value, pass: password.innerHTML};
+        registros.push(newUser);
         alert("Registrado");
       } else alert('Captcha incorrecto');
     } else alert('Contraseña mal colocada');
